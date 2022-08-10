@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <p>找到隱藏單字  請輸入<英文字母></p>
+    
+    <!-- 斷頭臺區 -->
+    <div class="game-container">
+        <svg height="250" width="200" class="figure-container">
+          <!-- 吊台 -->
+          <line x1="60" y1="20" x2="140" y2="20" />
+          <line x1="140" y1="20" x2="140" y2="50" />
+          <line x1="60" y1="20" x2="60" y2="230" />
+          <line x1="20" y1="230" x2="100" y2="230" />
+  
+          <!-- 頭 -->
+          <circle cx="140" cy="70" r="20" class="figure-part" />
+          <!-- 身體 -->
+          <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+          <!-- 手 -->
+          <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+          <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+          <!-- 腿 -->
+          <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+          <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+        </svg>
+  
+        <!-- 錯字區 -->
+        <div class="wrong-letters-container">
+          <div id="wrong-letters"></div>
+        </div>
+        <!-- 文字區 -->
+        <div class="word" id="word"></div>
+      </div>
+  
+      <!-- 最終訊息 popup -->
+      <div class="popup-container" id="popup-container">
+        <div class="popup">
+          <h2 id="final-message"></h2>
+          <button id="play-button">重玩</button>
+        </div>
+      </div>
+  
+      <!-- 提示訊息 -->
+      <div class="notification-container" id="notification-container">
+        <p>您已經輸入過這個字母了</p>
+      </div>
+  
+      <script src="script.js"></script>
+    </body>
+
+</body>
+</html>
